@@ -1,0 +1,21 @@
+<div class="content">
+  <button mat-raised-button (click)="game()">Prepar Board</button>
+</div>
+<div class="main">
+  <div class="row" *ngFor="let rows of board; let i = index">
+    <div class="column" *ngFor="let cell of rows; let j = index">
+      <div
+        class="cell"
+        (click)="$$selectMember(i, j, cell)"
+        [ngClass]="{ changeColor: cell.highlight, brown: cell.color }"
+      >
+        <!-- {{ i }} - {{ j }} -->
+        <!-- 'black':cell.isBlackCoin, 'green' :cell.isWhiteCoin, -->
+        <!-- <button *ngIf="cell.clue !== 0" mat-fab>{{cell.clue}}</button> -->
+        <button mat-fab *ngIf="cell.clue !== 0">
+          <i [ngClass]="cell.icon"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

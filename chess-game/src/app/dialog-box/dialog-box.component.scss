@@ -1,0 +1,54 @@
+:host {
+	display: block;
+	display: flex;
+	flex-direction: column;
+
+	.rows {
+
+		width: 1000px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+
+		span {
+			border: 1px solid blueviolet;
+			width: 100px;
+			height: 100px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			i {
+				width: 20px;
+				font-size: 30px;
+			}
+
+		}
+
+		.blue {
+			background-color: lightcyan;
+		}
+
+		.green {
+			background-color: rgb(236, 213, 213);
+		}
+
+		span:active {
+			background-color: aqua;
+			cursor: pointer;
+		}
+
+		span:hover {
+			cursor: pointer;
+			background-color: lawngreen;
+		}
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}

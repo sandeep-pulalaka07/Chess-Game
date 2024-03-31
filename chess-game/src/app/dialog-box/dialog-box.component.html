@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Choose Your Powers</h1>
+<ng-container *ngIf="fakeData.length > 0">
+	<div mat-dialog-content class="rows">
+		<span *ngFor="let cell of fakeData" (click)="onClick(cell)" [ngClass]="cell.isBlackCoin ? 'blue' : 'green'">
+			<i [ngClass]="cell.icon"></i>
+		</span>
+	</div>
+</ng-container>
+<div mat-dialog-actions class="footer">
+	<button mat-button mat-dialog-close>Close</button>
+	<button mat-button (click)="submit()">submit</button>
+</div>
